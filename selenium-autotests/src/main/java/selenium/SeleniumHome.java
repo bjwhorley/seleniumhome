@@ -13,6 +13,10 @@ public class SeleniumHome {
         Thread.sleep(5000);
         driver.get("http://www.google.com");
 
+        //get title information
+
+        System.out.println(driver.getTitle());
+
 
     }
 }

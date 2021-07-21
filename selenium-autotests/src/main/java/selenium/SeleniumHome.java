@@ -5,18 +5,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SeleniumHome {
 
-//public static WebDriver driver = new ChromeDriver();
+    static WebDriver driver;
 
-    public static void goToSite() throws InterruptedException {
+    public WebDriver getDriver() throws Exception {
         System.setProperty("webdriver.chrome.driver", "/Users/brianwhorley/tools/chromedriver");
-       WebDriver driver = new ChromeDriver();
-        Thread.sleep(5000);
-        driver.get("http://www.google.com");
 
-        //get title information
+        driver = new ChromeDriver();
 
-        System.out.println(driver.getTitle());
+        return driver;
 
+    }
+
+    public static void closeTest(){
+        System.setProperty("webdriver.chrome.driver", "/Users/brianwhorley/tools/chromedriver");
+
+        driver.quit();
 
     }
 }

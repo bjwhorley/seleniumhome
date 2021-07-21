@@ -23,5 +23,6 @@ public class SeleniumHomeTest extends SeleniumHome {
     public void testGoToSite() throws Exception {
 
         getDriver();
+        goToEspn();
     }
 }

@@ -16,9 +16,14 @@ public class SeleniumHome {
 
     }
 
-    public static void closeTest(){
-        System.setProperty("webdriver.chrome.driver", "/Users/brianwhorley/tools/chromedriver");
+    public static void goToEspn(){
 
+        driver.get("https://www.espn.com/");
+    }
+
+    public static void closeTest() throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "/Users/brianwhorley/tools/chromedriver");
+        Thread.sleep(500);
         driver.quit();
 
     }
